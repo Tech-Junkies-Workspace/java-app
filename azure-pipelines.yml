@@ -27,6 +27,7 @@ steps:
     script: |
       cd target
       ls -a
+      pwd
   displayName: print directories
 
 - task: PublishBuildArtifacts@1
