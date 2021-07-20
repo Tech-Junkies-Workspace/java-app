@@ -32,7 +32,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Pipeline.Workspace)/target/learning-tech.jar'
+    PathtoPublish: '$(Pipeline.Workspace)/s/target/learning-tech.jar'
     ArtifactName: 'dummy_app'
     publishLocation: 'Container'
   displayName: publish artefacts
