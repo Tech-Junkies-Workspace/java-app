@@ -20,15 +20,18 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    
+  displayName: Build
+
 - task: CmdLine@2
   inputs:
     script: |
-      'cd target'
-      'ls -a'
+      cd target
+      ls -a
+  displayName: print directories
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'dummy_app'
     publishLocation: 'Container'
+  displayName: publish artefacts
